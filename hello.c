@@ -14,9 +14,16 @@ void abc(void){
 	printf("%c\n",s[1] );
 }
 
-int main(void)
-{
+void sample(long *pnum){
+	*pnum += 100;
+	printf("%ld\n",*pnum );
+}
+
+int main(void){
 	abc();
+
+	long n = 1000;
+	sample(&n);
 
 	int sales[3];
 
@@ -29,6 +36,16 @@ int main(void)
 	//[3]のところを{}の中の値の個数に揃えたいときは省略して良い
 
 	printf("%d\n",sales[0] );
+
+	int a;
+	a = 10;
+
+	int *pa;
+	//ポインタ(記憶領域) paはアドレを格納するためのもの
+	pa = &a;
+	//& : アドレス演算子(aのアドレスを引っ張ってきなさい)
+
+	printf("%d\n", *pa );//paだけだとアドレスだけ。*paだとそのアドレスが示す変数(関節演算子)
 
 	return 0;
 }
