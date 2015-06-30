@@ -4,7 +4,34 @@
 //./hello(変換したファイルをコンパイル)
 //⌘+Cでとめられる
 
+//プロトタイプ宣言
+
+float getMax(float a, float b);
+//返り値の型、関数名、引数になにを使うか(関数の一行目)
+
+float getMax(float a, float b){
+	if (a >= b)
+	{
+		return a;
+	} else {
+		return b;
+	}
+}
+
+void sayHi(void){
+	printf("hi!\n");
+}
+
+
 int main(void){
+
+	float result;
+	result = getMax(2.3 , 5.2);
+	printf("%f\n", result);
+
+	sayHi();
+
+
 	//char(1文字) %c
 	/*演算子
 	代入を伴う場合 x=x+5; → x+=5;
@@ -86,4 +113,5 @@ int main(void){
 	*/
 
 	return 0;
+	//この0というのは関数がintだから整数を返してる無事に正常終了したよ
 }
